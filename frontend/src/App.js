@@ -5,6 +5,8 @@ import EthContext from "./contexts/eth-context";
 
 function App() {
   const ethCtx = useContext(EthContext);
+  console.log("ethCtx.accounts!!!!!!!!");
+  console.log(ethCtx.accounts);
 
   const buttonHandler = async () => {
     try {
@@ -26,10 +28,12 @@ function App() {
             </button>
           </div>
         )}
-        {ethCtx.accounts && <p>Show the Calender</p>}
-
-        <p>Connect with MetaMask</p>
-        <Calendar account={ethCtx.accounts} />
+        {ethCtx.accounts && (
+          <div>
+            <p>Show the Calender</p>
+            <Calendar account={ethCtx.accounts} />
+          </div>
+        )}
       </header>
     </div>
   );

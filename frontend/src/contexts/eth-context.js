@@ -9,12 +9,14 @@ const EthContext = React.createContext({
 });
 
 export const EthContextProvider = (props) => {
-  const [userAccounts, setUserAccounts] = useState();
+  const [userAccounts, setUserAccounts] = useState(false);
   const [contract, setContract] = useState();
   const isConnected = async () => {
     const provider = await detectEthereumProvider();
     const accounts = await provider.request({ method: "eth_accounts" });
-    setUserAccounts(accounts);
+    if (accounts.length > 0) {
+      setUserAccounts(accounts[0]);
+    }
   };
 
   const connectWalletHandler = async () => {

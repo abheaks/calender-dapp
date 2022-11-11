@@ -4,6 +4,19 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
+# HardHat Steps
+
+```shell
+
+mkdir hardhat-tutorial
+cd hardhat-tutorial
+npm init
+npm install --save-dev hardhat
+npx hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+
+```
+
 ```shell
 npx hardhat help
 npx hardhat test
@@ -16,18 +29,32 @@ Used Alchemy to deploy the contract in mumbai(Polygon TestNet)
 
 # Install Metamask
 
-`npm install @metamask/detect-provider `
+```shell
+npm install @metamask/detect-provider
+```
 
 # Compile Contracts
 
-`npx hardhat compile`
+```shell
+npx hardhat compile
+```
 
 # Up the local Nodes
 
-`npx hardhat node`
+```shell
+npx hardhat node
+```
 
 # Deploy the Contract
 
-`npx hardhat run scripts/deploy.js --network mumbai`
+```shell
+npx hardhat run scripts/deploy.js --network mumbai
+```
+
+# Create React App
+
+```shell
+npx create-react-app frontend
+```
 
 press ⇧⌘V in the editor to view Readme in VSCode
