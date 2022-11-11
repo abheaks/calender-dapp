@@ -29,3 +29,5 @@ Used Alchemy to deploy the contract in mumbai(Polygon TestNet)
 # Deploy the Contract
 
 `npx hardhat run scripts/deploy.js --network mumbai`
+
+press ⇧⌘V in the editor to view Readme in VSCode
